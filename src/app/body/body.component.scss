@@ -1,0 +1,19 @@
+.body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(1, 23, 58);
+    color: #fff;
+  }
+  
+  .body-trimmed{
+    width: calc(100% - 17.9rem);
+    margin-left: 15rem;
+  }
+  
+  .body-md-screen{
+    width: calc(100% - 10rem);
+    margin-left: 5rem;
+  }
+  

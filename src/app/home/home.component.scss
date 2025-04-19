@@ -1,0 +1,130 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    //gap: 0 40px;
+    margin-top: 50px;
+    animation: transitionIn 2s;
+
+    .left{
+        width: 20%;
+        height: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        ul{
+            position: absolute;
+            bottom: 0;
+            list-style-type: none;
+            text-align: center;
+
+            li{
+                padding: 10px 0;
+                cursor: pointer;
+                color: #f9f500;
+
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .center{
+        width: 60%;
+        //margin: 10px;
+        text-align: center;
+
+        .role{
+            letter-spacing: 1px;
+        }
+
+        .buttons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 5px 10px;
+            button{
+                border: 1px solid;
+                padding: 15px;
+                color: #0380a3;
+            }
+
+            button:hover{
+                background: #0380a3;
+                color: rgb(1, 23, 58);
+            }
+        }
+
+        .card{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 60%;
+            margin-top: 20px;
+
+            .card-outline{
+                width: 45%;
+                height: 100%;
+                background: linear-gradient(#0380a3, rgb(1, 23, 58));
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+            }
+
+            .person-img{
+                margin-top: 15px;
+                img{
+                    width: 80%;
+                }
+            }
+
+            .options{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                
+                ul{
+                    position: absolute;
+                    bottom: 0;
+                    display: flex;
+                    gap: 25px;
+                    margin: 10px;
+                    padding: 10px 25px;
+                    border-radius: 25px;
+                    backdrop-filter: blur(20px);
+                    list-style-type: none;
+                    
+
+                    li{
+                        color: #fff;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+
+                    li:hover{
+                        background-color: rgb(1, 23, 58);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .right{
+        width: 20%;
+        height: 90%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        p{
+            position: absolute;
+            bottom: 15px;
+            letter-spacing: 2px;
+            writing-mode: vertical-rl;
+            cursor: pointer;
+            color: #0380a3;
+        }
+    }
+}

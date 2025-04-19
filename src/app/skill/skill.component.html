@@ -1,0 +1,48 @@
+<div class="wrapper">
+    <div class="title">
+        <span>What Skill I Have</span>
+        <h2>My Skills</h2>
+    </div>
+    <div class="content-wrapper">
+        <div class="skills">
+            <div class="back-end-skills">
+                <div class="left">
+                    <h3>Back end skills</h3>
+                    <span></span>
+                </div>
+                <div>
+                    <ul>
+                        <li ngClass="box{{index}}"
+                            *ngFor="let skill of backendSkills; let isLast = last let index = index">
+                            <div class="skill-detail">
+                                <img src="{{skill.image}}" alt="">
+                                <p>{{skill.name}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div #lazyDiv class="front-end-skills">
+                <ng-container *ngIf="showFrondEndSkills">
+                    <div class="left">
+                        <h3>Front end skills</h3>
+                        <span></span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li ngClass="front-box{{index}}"
+                                *ngFor="let skill of frontendSkills; let isLast = last let index = index">
+                                <div class="skill-detail">
+                                    <img src="{{skill.image}}" alt="">
+                                    <p>{{skill.name}}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    <app-navigation-bar></app-navigation-bar>
+</div>

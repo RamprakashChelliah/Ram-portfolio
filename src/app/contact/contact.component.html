@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="title">
+        <span>Get In Touch</span>
+        <h2>Contact Me</h2>
+    </div>
+    <div class="content-wrapper">
+        <div class="left">
+            <ul class="contact-options">
+                <li class="card">
+                    <div class="icon">
+                        <mat-icon>email</mat-icon>
+                        <p class="heading">Email</p>
+                    </div>
+                    <div class="value">
+                        <p>{{emailId}}</p>
+                    </div>
+                </li>
+                <li class="card">
+                    <div class="icon">
+                        <mat-icon>phone</mat-icon>
+                        <p class="heading">Call</p>
+                    </div>
+                    <div class="value">
+                        <p>+91-{{mobileNumber}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <form [formGroup]="contactForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Your full name</mat-label>
+                    <input matInput formControlName="fullName" placeholder="Your full name" autocomplete="off">
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Your email</mat-label>
+                    <input matInput formControlName="email" placeholder="Your email" autocomplete="off">
+                    <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Your message</mat-label>
+                    <textarea matInput formControlName="message" placeholder="Your message"
+                        autocomplete="off"></textarea>
+                </mat-form-field>
+                <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <app-navigation-bar></app-navigation-bar>
+</div>

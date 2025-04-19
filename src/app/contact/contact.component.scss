@@ -1,0 +1,113 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    text-align: center;
+    animation: transitionIn 2s;
+}
+
+.title {
+    span {
+        font-size: 14px;
+    }
+
+    h2 {
+        color: #0380a3;
+    }
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .left {
+        width: 40%;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+            gap: 15px;
+            margin: 0;
+
+            li {
+                width: 220px;
+                height: 120px;
+                border-radius: 10px;
+                padding: 15px;
+                background-color: #1c6098;
+
+                .icon{
+                    padding-top: 5px;
+                }
+
+                .heading {
+                    letter-spacing: 2px;
+                    margin: 5px;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+
+                .value{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .right {
+        width: 55%;
+        form {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+
+            mat-form-field {
+                width: 100%;
+                color: #b8b8b8;
+
+                input,
+                textarea,
+                mat-label {
+                    color: #b8b8b8;
+                }
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #0380a3;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            button:disabled{
+                background-color: #a6a6a6;
+            }
+        }
+    }
+}
+
+:host ::ng-deep .mdc-text-field--outlined .mdc-notched-outline__leading {
+    border-color: #5596a7;
+}
+
+
+:host ::ng-deep .mdc-text-field--outlined .mdc-notched-outline__notch {
+    border-color: #5596a7;
+}
+
+
+:host ::ng-deep .mdc-text-field--outlined .mdc-notched-outline__trailing {
+    border-color: #5596a7;
+}
+
+:host ::ng-deep .mdc-text-field--hover .mdc-notched-outline__leading {
+    border-color: #5596a7 !important;
+}
