@@ -1,6 +1,5 @@
 .wrapper {
     width: 100%;
-    height: 100%;
     margin-top: 15px;
     text-align: center;
     animation: transitionIn 2s;
@@ -36,7 +35,7 @@
 
             li {
                 width: 220px;
-                height: 120px;
+                height: 110px;
                 border-radius: 10px;
                 padding: 15px;
                 background-color: #1c6098;
@@ -45,9 +44,13 @@
                     padding-top: 5px;
                 }
 
+                // .contact-detail{
+                //     margin-top: 20px;
+                // }
+
                 .heading {
                     letter-spacing: 2px;
-                    margin: 5px;
+                    margin: 5px 5px 15px 5px;
                 }
 
                 span {
@@ -98,11 +101,9 @@
     border-color: #5596a7;
 }
 
-
 :host ::ng-deep .mdc-text-field--outlined .mdc-notched-outline__notch {
     border-color: #5596a7;
 }
-
 
 :host ::ng-deep .mdc-text-field--outlined .mdc-notched-outline__trailing {
     border-color: #5596a7;
@@ -111,3 +112,95 @@
 :host ::ng-deep .mdc-text-field--hover .mdc-notched-outline__leading {
     border-color: #5596a7 !important;
 }
+
+@media (max-width: 375px){
+    .content-wrapper {
+        margin-top: 5px;
+        height: 100%;
+        gap: 10px;
+
+        .left{
+            width: 100%;
+            height: 100px;
+            font-size: 14px;
+
+            ul{
+                justify-content: space-around;
+                gap: 0;
+                padding: 0;
+                
+                li{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    width: 150px;
+                    height: 100px;
+                    padding: 0;
+                    background-color: transparent;
+
+                    .heading{
+                        margin: 5px;
+                    }
+
+                    .icon{
+                        padding-top: 0;
+                        //width: 30px;
+                        //height: 30px;
+                    }
+
+                    mat-icon{
+                        width: 20px;
+                        height: 20px;
+                        font-size: 20px;
+                        padding: 5px;
+                        border-radius: 50%;
+                        background-color: #1c6098;
+                    }
+
+                    .contact-detail{
+                        width: 100%;
+                        height: 50px;
+                        padding: 5px;
+                        border-radius: 10px;
+                        background-color: #1c6098;
+                        font-size: 14px;
+                        overflow-x: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+
+        .right{
+            width: 100%;
+            height: 350px;
+            overflow-y: scroll;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin-top: 10px;
+
+            form{
+                margin-top: 100px;
+                margin-bottom: 150px;
+
+                .button{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// :host ::ng-deep .ng-tns-c4-0{
+//     padding-top: 0;
+//     padding-bottom: 0;
+    
+// }
+
+// :host ::ng-deep .mat-mdc-form-field{
+//     line-height: 0;
+// }

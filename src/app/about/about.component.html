@@ -3,7 +3,7 @@
         <span>Get To Know</span>
         <h2>About Me</h2>
     </div>
-    <div class="content-wrapper">
+    <div *ngIf="!isMobileScreen" class="content-wrapper">
         <div class="left">
             <img src="../../assets/Avatar/58d1ffd773e509545c3eaa04876b09c1.png" alt="">
         </div>
@@ -40,5 +40,7 @@
             </div>
         </div>
     </div>
+
+    <app-mobile-view *ngIf="isMobileScreen"></app-mobile-view>
     <app-navigation-bar></app-navigation-bar>
 </div>

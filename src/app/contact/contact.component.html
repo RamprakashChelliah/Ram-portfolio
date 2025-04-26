@@ -9,19 +9,20 @@
                 <li class="card">
                     <div class="icon">
                         <mat-icon>email</mat-icon>
-                        <p class="heading">Email</p>
                     </div>
-                    <div class="value">
-                        <p>{{emailId}}</p>
+
+                    <div class="contact-detail">
+                        <p class="heading">Email</p>
+                        <span [matTooltip]="emailId">{{emailId}}</span>
                     </div>
                 </li>
                 <li class="card">
                     <div class="icon">
                         <mat-icon>phone</mat-icon>
-                        <p class="heading">Call</p>
                     </div>
-                    <div class="value">
-                        <p>+91-{{mobileNumber}}</p>
+                    <div class="contact-detail">
+                        <p class="heading">Call</p>
+                        <span>+91-{{mobileNumber}}</span>
                     </div>
                 </li>
             </ul>
@@ -45,7 +46,9 @@
                     <textarea matInput formControlName="message" placeholder="Your message"
                         autocomplete="off"></textarea>
                 </mat-form-field>
-                <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit()">Submit</button>
+                <div class="button">
+                    <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit()">Submit</button>
+                </div>
             </form>
         </div>
     </div>

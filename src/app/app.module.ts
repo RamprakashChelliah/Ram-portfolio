@@ -20,6 +20,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     SkillComponent,
     RecentWorkComponent,
     ContactComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    MobileViewComponent,
   ],
   imports: [
     BrowserModule,

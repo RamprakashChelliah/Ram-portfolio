@@ -1,5 +1,5 @@
 <div class="navigation-options">
-    <ul>
+    <ul [ngClass]="{ 'home-screen-view' : isHomeScreen}">
         <li routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
         matTooltip="Home">
             <mat-icon>home</mat-icon>

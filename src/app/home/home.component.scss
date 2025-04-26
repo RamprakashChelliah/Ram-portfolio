@@ -22,11 +22,15 @@
             li{
                 padding: 10px 0;
                 cursor: pointer;
-                color: #f9f500;
+                //color: #f9f500;
 
                 img{
                     width: 30px;
                 }
+            }
+
+            .email-icon mat-icon{
+                color: #f9f500;
             }
         }
     }
@@ -125,6 +129,27 @@
             writing-mode: vertical-rl;
             cursor: pointer;
             color: #0380a3;
+        }
+    }
+}
+
+@media (max-width: 375px){
+
+    .wrapper{
+        .left, .right{
+            width: 10%;
+        }
+
+        .center{
+            width: 80%;
+
+            .card{
+                margin-top: 40px;
+                
+                .card-outline{
+                    width: 75%;
+                }
+            }
         }
     }
 }
