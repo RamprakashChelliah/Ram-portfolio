@@ -9,7 +9,7 @@ import { DownloadFileService } from '../service/download-file.service';
 })
 export class HomeComponent {
 
-  private pathURL = "../../assets/CV/Resume.pdf"
+  private pathURL = "assets/CV/Resume.pdf"
 
   constructor(private downloadServie: DownloadFileService){
 

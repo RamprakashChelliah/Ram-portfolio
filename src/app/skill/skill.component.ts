@@ -11,34 +11,34 @@ export class SkillComponent implements AfterViewInit{
   
   backendSkills = [
     {
-      image: "../../assets/skill-logo/linq.png",
+      image: "assets/skill-logo/linq.png",
       name: "LINQ"
     },
     {
-      image: "../../assets/skill-logo/MongoDB.png",
+      image: "assets/skill-logo/MongoDB.png",
       name: "Mongo DB"
     },
     {
-      image: "../../assets/skill-logo/NETcore.png",
+      image: "assets/skill-logo/NETcore.png",
       name: "Dot net core"
     },
     {
-      image: "../../assets/skill-logo/Csharp.png",
+      image: "assets/skill-logo/Csharp.png",
       name: "C#"
     }
   ];
 
   frontendSkills = [
     {
-      image: "../../assets/skill-logo/js.png",
+      image: "assets/skill-logo/js.png",
       name: "Javascript"
     },
     {
-      image: "../../assets/skill-logo/css.png",
+      image: "assets/skill-logo/css.png",
       name: "CSS"
     },
     {
-      image: "../../assets/skill-logo/html.png",
+      image: "assets/skill-logo/html.png",
       name: "HTML"
     }
   ]
