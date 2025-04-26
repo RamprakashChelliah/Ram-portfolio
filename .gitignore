@@ -43,4 +43,15 @@ Thumbs.db
 
 #Added by me
 /node_modules
+
+# Environment variables
 .env
+
+# Logs
+*.log
+
+# Angular build artifacts
+.angular/
+
+# End-to-end test directory
+e2e/
