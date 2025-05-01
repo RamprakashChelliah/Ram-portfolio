@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit, OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     this.screenWidth = window.screen.width
 
-    if(this.screenWidth <= 375){
+    if(this.screenWidth <= 425){
       this.isMobileScreen = true;
     }
   }

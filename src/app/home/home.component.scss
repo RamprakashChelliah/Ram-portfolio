@@ -37,6 +37,9 @@
 
     .center{
         width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         //margin: 10px;
         text-align: center;
 
@@ -66,7 +69,7 @@
             justify-content: center;
             width: 100%;
             height: 60%;
-            margin-top: 20px;
+            //margin-top: 20px;
 
             .card-outline{
                 width: 45%;
@@ -133,6 +136,79 @@
     }
 }
 
+@media (max-width: 768px){
+
+    .wrapper{
+        margin-top: 10px;
+
+        .left, .right{
+            width: 10%;
+            height: 100%;
+        }
+
+        .left ul{
+            padding-left: 20px;
+        }
+        
+        .right p{
+            bottom: 30px;
+        }
+
+        .center{
+            width: 80%;
+            //height: 95%;
+
+            .card{
+                margin-top: 40px;
+                width: 100%;
+                height: 100%;
+
+                .card-outline{
+                    width: 75%;
+                    height: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+
+    .wrapper{
+        .left, .right{
+            width: 10%;
+        }
+
+        .left ul{
+            padding-left: 20px;
+        }
+
+        .right p{
+            bottom: 30px;
+        }
+
+        .center{
+            width: 80%;
+            //height: 85%;
+
+            .card{
+                margin-top: 40px;
+                width: 100%;
+                height: 100%;
+
+                .person-img{
+                    margin-top: 20px;
+                }
+
+                .card-outline{
+                    width: 75%;
+                    height: 65%;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 375px){
 
     .wrapper{
@@ -142,12 +218,20 @@
 
         .center{
             width: 80%;
+            height: 85%;
 
             .card{
                 margin-top: 40px;
-                
+                width: 100%;
+                height: 100%;
+
                 .card-outline{
-                    width: 75%;
+                    width: 85%;
+                    height: 70%;
+
+                    .person-img{
+                        margin-top: 30px;
+                    }
                 }
             }
         }
