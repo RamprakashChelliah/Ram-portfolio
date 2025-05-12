@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-view',
@@ -7,4 +8,17 @@ import { Component, Input } from '@angular/core';
 })
 export class MobileViewComponent {
   @Input() totalExperience : string;
+
+  constructor(private router: Router){
+    
+  }
+  
+  navigateToProjects(){
+    this.router.navigateByUrl('projects');
+  }
+
+  navigateToCompanies(){
+    this.router.navigateByUrl('companies');
+  }
+  
 }
