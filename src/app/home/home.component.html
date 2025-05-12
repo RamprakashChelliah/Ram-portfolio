@@ -14,8 +14,8 @@
                 <p class="role">Dot net developer</p>
             </div>
             <div class="buttons">
-                <button mat-button (click)="downloadCV()">Download CV</button>
-                <button mat-button routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Let's talk</button>
+                <button mat-button (click)="downloadCV()" class="download-button">Download CV <mat-icon>arrow_downward</mat-icon></button>
+                <button mat-button routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Let's talk <mat-icon>arrow_forward</mat-icon></button>
             </div>
         </div>
         <div class="card">
@@ -29,6 +29,6 @@
         </div>
     </div>
     <div class="right">
-        <p routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Scroll down</p>
+        <p routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Scroll down <mat-icon>arrow_forward</mat-icon></p>
     </div>
 </div>

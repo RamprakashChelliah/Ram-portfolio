@@ -88,6 +88,11 @@
                 background-color: #0380a3;
                 color: #fff;
                 cursor: pointer;
+
+                mat-icon{
+                    transform: rotate(315deg);
+                    margin-bottom: 5px;
+                }
             }
 
             button:disabled{
@@ -113,7 +118,7 @@
     border-color: #5596a7 !important;
 }
 
-@media (max-width: 375px){
+@media (max-width: 768px){
     .content-wrapper {
         margin-top: 5px;
         height: 100%;

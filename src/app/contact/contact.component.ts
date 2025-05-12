@@ -9,7 +9,7 @@ import { EmailService } from '../service/emailService';
 })
 export class ContactComponent implements OnInit{
   emailId = "ramprakashc069@gmail.com";
-  mobileNumber = 7695830346;
+  mobileNumber = 1234567890;
   contactForm: FormGroup;
 
   constructor(private emailService: EmailService){

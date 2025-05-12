@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mobile-view',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mobile-view.component.scss']
 })
 export class MobileViewComponent {
-
+  @Input() totalExperience : string;
 }

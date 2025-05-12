@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <div class="overview">
+        <div class="back-button">
+            <mat-icon routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                matTooltip="Go back to about">arrow_back</mat-icon>
+        </div>
+        <div class="title">
+            <span>Get To Know</span>
+            <h2>About My Experience</h2>
+        </div>
+        <div class="card-overview">
+            <mat-card *ngFor="let company of companyDetails">
+                <mat-card-header>
+                    <div class="left">
+                        <div mat-card-avatar class="company-logo"></div>
+                        <div class="title-group">
+                            <mat-card-title>{{company.name}}</mat-card-title>
+                            <mat-card-subtitle>{{company.jobTitle}}</mat-card-subtitle>
+                        </div>
+                    </div>
+                    <div class="splitter"></div>
+                    <div>
+                        <mat-card-subtitle>{{company.dateOfEmployment}}</mat-card-subtitle>
+                    </div>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <ul *ngFor="let description of company.description">
+                        <li>{{description}}</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <app-navigation-bar></app-navigation-bar>
+</div>
+
+
+
+
+
+<!-- <div>
+        In a portfolio, information about past companies can be presented in a way that showcases your experience and achievements while respecting confidentiality. You can include company names, job titles, dates of employment, and brief descriptions of your roles and responsibilities. Focus on highlighting your accomplishments and the skills you gained at each company. 
+Here's a more detailed breakdown:
+Company Names: List the names of the companies where you've worked. 
+Job Titles: Clearly state your job title at each company. 
+Dates of Employment: Include the start and end dates of your employment at each company. 
+Role Descriptions: Provide concise and impactful descriptions of your roles and responsibilities. 
+Achievements and Accomplishments: Showcase your accomplishments, focusing on quantifiable results and the impact you made. 
+Skills and Expertise: Highlight the skills and expertise you developed while working at each company. 
+Professional Summary: Include a brief professional summary at the beginning of your portfolio to provide a concise overview of your experience and career goals. 
+Testimonials and References: If possible, include testimonials or references from previous employers or clients. 
+Keep it Confidential: Be mindful of any confidentiality agreements and avoid sharing sensitive or proprietary information. 
+Prioritize Relevance: Select the most relevant and impactful work samples that demonstrate your skills and experience. 
+    </div> -->

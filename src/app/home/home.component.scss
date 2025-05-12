@@ -27,10 +27,18 @@
                 img{
                     width: 30px;
                 }
+
+                img:hover{
+                    transform: scale(1.1);
+                }
             }
 
             .email-icon mat-icon{
                 color: #f9f500;
+            }
+
+            .email-icon mat-icon:hover{
+                transform: scale(1.1);
             }
         }
     }
@@ -44,7 +52,12 @@
         text-align: center;
 
         .role{
-            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(to right, #0380a3, #fff);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .buttons{
@@ -61,6 +74,17 @@
             button:hover{
                 background: #0380a3;
                 color: rgb(1, 23, 58);
+                animation: fadein 2s;
+
+                mat-icon{
+                    animation: flickerAnimation linear .5s infinite;
+                }
+            }
+
+            .download-button:hover{
+                mat-icon{
+                    animation: downFlickerAnimation linear .5s infinite;
+                }
             }
         }
 
@@ -133,8 +157,50 @@
             cursor: pointer;
             color: #0380a3;
         }
+
+        p:hover{
+            mat-icon{
+                animation: flickerAnimation linear .5s infinite;
+            }
+        }
     }
 }
+
+@keyframes downFlickerAnimation {
+    0% { margin-top: 2px;}
+    50% { margin-top: 0;}
+    100% { margin-top: 2px;}
+}
+
+@keyframes flickerAnimation {
+    0% { scale: 1;}
+    50% { scale: 0.80;}
+    100% { scale: 1;}
+}
+
+// .role {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     border-right: 2px solid black;
+//     width: 0;
+//     animation: typing 4s steps(22) forwards, blink 0.7s step-end infinite;
+//   }
+
+//   @keyframes typing {
+//     from {
+//       width: 0;
+//     }
+//     to {
+//       width: 16ch;
+//     }
+//   }
+
+//   @keyframes blink {
+//     50% {
+//       border-color: transparent;
+//     }
+//   }
+
 
 @media (max-width: 768px){
 
@@ -156,7 +222,9 @@
 
         .center{
             width: 80%;
-            //height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .card{
                 width: 100%;
@@ -166,8 +234,8 @@
                 justify-content: end;
 
                 .card-outline{
-                    width: 75%;
-                    height: 60%;
+                    width: 80%;
+                    height: 55%;
                 }
             }
         }

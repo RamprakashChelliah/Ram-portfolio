@@ -41,10 +41,12 @@
             list-style-type: none;
             gap: 15px;
             padding: 0;
+            margin-top: 0;
             
             li {
                 width: 180px;
                 height: 120px;
+                transition: transform 0.3s ease;
 
                 img{
                     padding: 5px;
@@ -75,12 +77,25 @@
                     }
                 }
             }
+
+            li:hover{
+                transform: scale(1.02);
+            }
+
+            .company, .project{
+                cursor: pointer;
+            }
         }
 
         .content {
             width: 95%;
-            margin-top: 25px;
+            margin-top: 30px;
             text-align: left;
+            line-height: 1.4;
+
+            span{
+                color: #f0a31e;
+            }
         }
 
         .button {
@@ -92,8 +107,25 @@
                 background-color: #0380a3;
                 color: #fff;
             }
+
+            button:hover{
+                mat-icon{
+                    animation: flickerAnimation .5s infinite;
+                }
+            }
         }
     }
+}
+
+@keyframes flickerAnimation {
+    0% { scale: 1;}
+    50% { scale: 0.85;}
+    100% { scale: 1;}
+}
+
+@keyframes scalingAnimation {
+    0% { scale: 1;}
+    100% { scale: 1.05;}
 }
 
 @media (max-width: 768px){

@@ -4,6 +4,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule
 import { MatInputModule } from '@angular/material/input'; // Import MatInputModule
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule} from '@angular/material/divider'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
+import { ProjectComponent } from './project/project.component';
+import { CompanyComponent } from './company/company.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,8 @@ import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
     ContactComponent,
     NavigationBarComponent,
     MobileViewComponent,
+    ProjectComponent,
+    CompanyComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,11 +48,13 @@ import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
     ReactiveFormsModule,
     MatFormFieldModule, // Add it here
     MatInputModule, // Add it here
+    MatCardModule,
+    MatDividerModule,
     //Material icon
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
