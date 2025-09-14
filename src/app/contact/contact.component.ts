@@ -38,6 +38,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("hit")
     this.emailService
       .sendMail("Request to contact", this.contactForm.get('fullName').value,
         this.contactForm.get('email').value, this.contactForm.get('message').value);
