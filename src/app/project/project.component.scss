@@ -58,9 +58,12 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            overflow-y: auto; /* enable scroll */
-            -ms-overflow-style: none; /* IE/Edge */
-            scrollbar-width: none; /* Firefox */
+            overflow-y: auto;
+            /* enable scroll */
+            -ms-overflow-style: none;
+            /* IE/Edge */
+            scrollbar-width: none;
+            /* Firefox */
             gap: 20px;
             padding: 10px 0;
 
@@ -73,7 +76,7 @@
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
                 transition: all 0.3s ease;
 
-                .card-content{
+                .card-content {
                     margin: 5px;
                     border-radius: 8px;
                 }
@@ -89,10 +92,10 @@
                         display: flex;
                         align-items: center;
                         gap: 10px;
-                        
-                        p{
+
+                        p {
                             font-size: 18px;
-                        font-weight: bold;
+                            font-weight: bold;
                         }
                     }
 
@@ -132,7 +135,7 @@
             .card:hover {
                 transform: translateY(-2px);
 
-                .card-content{
+                .card-content {
                     background-color: #ebebeb;
                 }
             }
@@ -144,8 +147,28 @@
 
     .wrapper {
         .overview {
+            .top {
+                justify-content: center;
+
+                .back-button {
+                    padding: 30px 5px 0 0px;
+                }
+
+                .title {
+                    width: 80%;
+                }
+            }
+
             .card-overview {
                 font-size: 14px;
+
+                .card {
+                    width: 75%;
+
+                    .header .left .title {
+                        text-align: left;
+                    }
+                }
 
                 mat-card {
                     width: 85%;
@@ -217,7 +240,7 @@
             align-items: center;
             gap: 10px;
 
-            .title p{
+            .title p {
                 font-size: 22px;
                 font-weight: bold;
                 margin: 12px 0;
@@ -238,9 +261,9 @@
             }
         }
 
-        .right:hover{
-            mat-icon{
-                 transition: 0.5s;
+        .right:hover {
+            mat-icon {
+                transition: 0.5s;
                 transform: rotate(360deg);
                 -webkit-transform: rotate(360deg);
                 -ms-transform: rotate(360deg);
@@ -265,13 +288,13 @@
         }
     }
 
-    .content{
+    .content {
         max-height: 60vh;
         overflow-y: scroll;
         text-align: justify;
         padding: 5px;
 
-        p{
+        p {
             text-indent: 5ch;
         }
     }
