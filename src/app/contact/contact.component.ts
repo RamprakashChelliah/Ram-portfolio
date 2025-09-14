@@ -40,9 +40,8 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     this.emailService
       .sendMail("Request to contact", this.contactForm.get('fullName').value,
-        this.contactForm.get('email').value, this.contactForm.get('message').value)
-      .subscribe(respose => {
-        console.log("Email sent:", respose)
-      });
+        this.contactForm.get('email').value, this.contactForm.get('message').value);
+
+    this.formInitialize();
   }
 }
