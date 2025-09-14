@@ -9,15 +9,14 @@ import { Observable } from "rxjs";
 })
 export class EmailService {
     private apiUrl = "https://portfolio-server-nhmv.onrender.com/email";
+    //private apiUrl = "http://localhost:3000/email";
 
     constructor(private http: HttpClient) {
-
     }
 
-    sendMail(subject: string, fullName: string, email: string, text: string): Observable<any> {
+    sendMail(subject: string, fullName: string, email: string, text: string){
         const emailData = { subject, fullName, email, text };
-        return this.http.post(this.apiUrl, emailData, {
-            headers: { "Content-Type": "application/json" }
-        })
+        this.http.post(this.apiUrl, emailData, {headers: { "Content-Type": "application/json" }})
+        .subscribe();
     }
 }
