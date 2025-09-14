@@ -16,7 +16,7 @@
                         <span [matTooltip]="emailId">{{emailId}}</span>
                     </div>
                 </li>
-                <li class="card">
+                <!-- <li class="card">
                     <div class="icon">
                         <mat-icon>phone</mat-icon>
                     </div>
@@ -24,7 +24,7 @@
                         <p class="heading">Call</p>
                         <span>+91-{{mobileNumber}}</span>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="right">
@@ -32,12 +32,21 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Your full name</mat-label>
                     <input matInput formControlName="fullName" placeholder="Your full name" autocomplete="off">
+                    <mat-error *ngIf="contactForm.get('fullName')?.hasError('required')">
+                        Full name is required
+                    </mat-error>
                     <mat-icon matSuffix>person</mat-icon>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
-                    <mat-label>Your email</mat-label>
-                    <input matInput formControlName="email" placeholder="Your email" autocomplete="off">
+                    <mat-label>Your email address</mat-label>
+                    <input matInput formControlName="email" placeholder="Your email address" autocomplete="off">
+                    <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+                        Email is required
+                    </mat-error>
+                    <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+                        Please enter a valid email
+                    </mat-error>
                     <mat-icon matSuffix>email</mat-icon>
                 </mat-form-field>
 
@@ -45,9 +54,25 @@
                     <mat-label>Your message</mat-label>
                     <textarea matInput formControlName="message" placeholder="Your message"
                         autocomplete="off"></textarea>
+                    <!-- Required validation -->
+                    <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+                        Message is required
+                    </mat-error>
+
+                    <!-- Min length validation -->
+                    <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+                        Message must be at least 10 characters long
+                    </mat-error>
+
+                    <!-- Max length validation -->
+                    <mat-error *ngIf="contactForm.get('message')?.hasError('maxlength')">
+                        Message cannot exceed 500 characters
+                    </mat-error>
                 </mat-form-field>
                 <div class="button">
-                    <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit()"> <mat-icon>send</mat-icon> Send</button>
+                    <button mat-button [disabled]="contactForm.invalid" (click)="onSubmit()"> 
+                        <mat-icon>send</mat-icon> Send Message
+                    </button>
                 </div>
             </form>
         </div>

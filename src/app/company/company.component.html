@@ -1,13 +1,18 @@
 <div class="wrapper">
     <div class="overview">
-        <div class="back-button">
+        <div class="top">
+            <div class="back-button">
             <mat-icon routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
                 matTooltip="Go back to about">arrow_back</mat-icon>
+            </div>
+            <div class="title">
+                <span>Get To Know</span>
+                <h2>About My Experience</h2>
+            </div>
+            <div class="splitter">
+            </div>
         </div>
-        <div class="title">
-            <span>Get To Know</span>
-            <h2>About My Experience</h2>
-        </div>
+        
         <div class="card-overview">
             <mat-card *ngFor="let company of companyDetails">
                 <mat-card-header>

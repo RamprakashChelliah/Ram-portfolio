@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <div class="overview">
+        <div class="top">
+            <div class="back-button">
+                <mat-icon routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    matTooltip="Go back to projects">arrow_back</mat-icon>
+            </div>
+            <div class="title">
+                <span>Get To Know</span>
+                <h2>About My {{projectName}} Project Experience</h2>
+            </div>
+            <div class="splitter">
+            </div>
+        </div>
+
+        <div class="card-overview">
+            <div class="card" *ngFor="let company of moduleOverview" (click)="getModuleDetail(company)">
+                <div class="card-content">
+                    <div class="header">
+                    <div class="left">
+                        <div mat-card-avatar class="company-logo"
+                            [ngStyle]="{'background-color': company.backgroudColor}">
+                            <img src={{company.icon}} alt="" width="25px">
+                        </div>
+                        <div class="title">
+                            <p>{{company.name}}</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" *ngIf="activeModule !== null">
+        <div class="popup-content">
+            <div class="header">
+                <div class="left">
+                    <div class="company-logo" [ngStyle]="{'background-color': activeModule.backgroudColor}">
+                        <img src={{activeModule.icon}} alt="" width="25px">
+                    </div>
+                    <div class="title">
+                        <p>{{activeModule.name}}</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <mat-icon (click)="onCloseActiveModule()">close</mat-icon>
+                </div>
+
+            </div>
+            <mat-divider></mat-divider>
+            <div class="content">
+                <p>{{activeModule.popUpDetail.overview}}</p>
+                <h2>{{activeModule.popUpDetail.subHeading}}</h2>
+                <ul *ngFor="let detail of activeModule.popUpDetail.detail">
+                    <h2>{{detail.heading}}</h2>
+                    <ul *ngFor="let description of detail.description">
+                        <li>{{description}}</li>
+                    </ul>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <app-navigation-bar></app-navigation-bar>
+</div>

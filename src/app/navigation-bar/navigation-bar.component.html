@@ -1,20 +1,17 @@
 <div class="navigation-options">
     <ul [ngClass]="{ 'home-screen-view' : isHomeScreen}">
-        <li routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        matTooltip="Home">
+        <li routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" matTooltip="Home">
             <mat-icon>home</mat-icon>
         </li>
-        <li routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        matTooltip="About">
+        <li routerLink="/about" routerLinkActive="active"  [class.active]="isAboutActive" matTooltip="About">
             <mat-icon>person</mat-icon>
         </li>
-        <li routerLink="/skill" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        matTooltip="Skills">
+        <li routerLink="/skill" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" matTooltip="Skills">
             <mat-icon>highlight</mat-icon>
         </li>
         <!-- <li routerLink="/recent-work" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">R</li> -->
         <li routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-        matTooltip="Contact">
+            matTooltip="Contact">
             <mat-icon>perm_contact_calendar</mat-icon>
         </li>
     </ul>

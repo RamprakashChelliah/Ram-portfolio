@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NavigationBarService } from '../service/navigation-bar.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,4 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class NavigationBarComponent {
   @Input() isHomeScreen : boolean = false;
+   isAboutActive = false;
+
+    constructor(private routeState: NavigationBarService) {
+    this.routeState.aboutActive$.subscribe(isActive => {
+      this.isAboutActive = isActive;
+    });
+  }
 }

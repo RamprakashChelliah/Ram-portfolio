@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { RecentWorkComponent } from './recent-work/recent-work.component';
 import { ProjectComponent } from './project/project.component';
 import { CompanyComponent } from './company/company.component';
+import { ModuleComponent } from './module/module.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'recent-work', component: RecentWorkComponent},
   {path: 'projects', component: ProjectComponent},
   {path: 'companies', component: CompanyComponent},
+  {path: 'modules', component: ModuleComponent},
 ];
 
 @NgModule({

@@ -1,3 +1,39 @@
 <div class="wrapper">
+    <div class="overview">
+        <div class="top">
+            <div class="back-button">
+                <mat-icon routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    matTooltip="Go back to about">arrow_back</mat-icon>
+            </div>
+            <div class="title">
+                <span>Get To Know</span>
+                <h2>About My Project experience</h2>
+            </div>
+            <div class="splitter">
+            </div>
+        </div>
+
+        <div class="card-overview">
+            <div class="card" *ngFor="let project of projectOverview" (click)="onClickProjectDetail(project)">
+                <div class="card-content">
+                    <div class="header">
+                    <div class="left">
+                        <div mat-card-avatar class="company-logo"
+                            [ngStyle]="{'background-color': project.backgroudColor}">
+                            <img src={{project.icon}} alt="" width="25px">
+                        </div>
+                        <div class="title">
+                            <p>{{project.name}}</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <app-navigation-bar></app-navigation-bar>
 </div>

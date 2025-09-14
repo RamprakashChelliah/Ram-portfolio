@@ -7,33 +7,42 @@ import { EmailService } from '../service/emailService';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit{
-  emailId = "ramprakashc069@gmail.com";
+export class ContactComponent implements OnInit {
+  emailId = "ramprakashc.job@gmail.com";
   mobileNumber = 1234567890;
   contactForm: FormGroup;
 
-  constructor(private emailService: EmailService){
-
+  constructor(private emailService: EmailService) {
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.formInitialize();
   }
 
   formInitialize() {
     this.contactForm = new FormGroup({
-      fullName: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      message: new FormControl(),
+      fullName: new FormControl('', [
+        Validators.required,
+        Validators.minLength(3)
+      ]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+      message: new FormControl('', [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(500)
+      ]),
     });
   }
 
-  onSubmit(){
+  onSubmit() {
     this.emailService
-    .sendMail("Request to contact", this.contactForm.get('fullName').value, 
-    this.contactForm.get('email').value, this.contactForm.get('message').value)
-    .subscribe(respose => {
-      console.log("Email sent:", respose)
-    });
+      .sendMail("Request to contact", this.contactForm.get('fullName').value,
+        this.contactForm.get('email').value, this.contactForm.get('message').value)
+      .subscribe(respose => {
+        console.log("Email sent:", respose)
+      });
   }
 }

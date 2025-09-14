@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
 import { ProjectComponent } from './project/project.component';
 import { CompanyComponent } from './company/company.component';
+import { ModuleComponent } from './module/module.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CompanyComponent } from './company/company.component';
     MobileViewComponent,
     ProjectComponent,
     CompanyComponent,
+    ModuleComponent,
   ],
   imports: [
     BrowserModule,
