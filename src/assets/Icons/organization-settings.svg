@@ -1,0 +1,48 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-label="Organization Level Global Settings Icon"
+  class="icon"
+>
+  <style>
+    .icon {
+      width: 120px;
+      height: 120px;
+      stroke: #2563eb; /* Tailwind blue-600 */
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+    .icon-globe {
+      fill: #3b82f6; /* Tailwind blue-500 */
+      opacity: 0.1;
+    }
+  </style>
+
+  <!-- Globe Circle -->
+  <circle cx="32" cy="32" r="28" class="icon-globe" />
+  <circle cx="32" cy="32" r="28" />
+
+  <!-- Globe Latitude Lines -->
+  <path d="M4 32h56" />
+  <path d="M32 4c6 0 12 28 0 56" />
+  <path d="M32 4c-6 0-12 28 0 56" />
+
+  <!-- Globe Longitude Lines -->
+  <path d="M12 12c8 8 32 8 40 0" />
+  <path d="M12 52c8-8 32-8 40 0" />
+
+  <!-- Gear (Settings) -->
+  <circle cx="48" cy="48" r="8" />
+  <!-- Gear teeth -->
+  <path d="M48 38v-6" />
+  <path d="M48 58v6" />
+  <path d="M38 48h-6" />
+  <path d="M58 48h6" />
+  <path d="M42 42l-4-4" />
+  <path d="M54 54l4 4" />
+  <path d="M42 54l-4 4" />
+  <path d="M54 42l4-4" />
+</svg>

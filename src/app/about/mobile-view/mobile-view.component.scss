@@ -6,11 +6,11 @@
     animation: transitionIn 2s;
 }
 
-.experience-detail{
+.experience-detail {
     width: 100%;
     height: 22%;
 
-    ul{
+    ul {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-evenly;
@@ -18,17 +18,17 @@
         gap: 10px 5px;
         padding: 0 5px;
 
-        li{
+        li {
             width: 100px;
             height: 100px;
             font-size: 12px;
             transition: transform 0.3s ease;
-            
-            p{
+
+            p {
                 margin: 0;
             }
 
-            img{
+            img {
                 width: 25px;
                 height: 25px;
                 padding: 5px;
@@ -36,7 +36,7 @@
                 border-radius: 50%;
             }
 
-            .detail{
+            .detail {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -52,24 +52,48 @@
                     letter-spacing: 2px;
                 }
 
-                span {
-                    font-size: 18px;
-                    font-weight: 600;
+                .value-info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 0 5px;
+
+                    .gap-splitter {
+                        width: 20px;
+                    }
+
+                    span {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+
+                    mat-icon {
+                        padding: 1px;
+                        width: 16px;
+                        height: 16px;
+                        font-size: 16px;
+                        background: #e0e0e0;
+                        color: #1c6098;
+                        border-radius: 50px;
+                        cursor: pointer;
+                    }
                 }
             }
         }
 
-        li:hover{
+        li:hover {
             transform: scale(1.02);
         }
 
-        .company, .project{
+        .company,
+        .project {
             cursor: pointer;
         }
     }
 }
 
-.img-content-wrapper{
+.img-content-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -85,9 +109,9 @@
         }
     }
 
-    .right{
+    .right {
         width: 60%;
-        
+
         .content {
             width: 100%;
             height: 90%;
@@ -95,14 +119,15 @@
             text-align: center;
             font-size: 14px;
 
-            span{
+            span {
                 color: #f0a31e;
             }
         }
 
-        .button{
+        .button {
             margin-top: 10px;
-            button{
+
+            button {
                 height: 30px;
                 padding: 0 5px;
                 font-size: 12px;
@@ -110,8 +135,8 @@
                 color: #fff;
             }
 
-            button:hover{
-                mat-icon{
+            button:hover {
+                mat-icon {
                     animation: flickerAnimation .5s infinite;
                 }
             }
@@ -120,7 +145,15 @@
 }
 
 @keyframes flickerAnimation {
-    0% { scale: 1;}
-    50% { scale: 0.85;}
-    100% { scale: 1;}
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.85;
+    }
+
+    100% {
+        scale: 1;
+    }
 }

@@ -31,6 +31,9 @@ export class ModuleComponent implements OnInit {
     this.moduleOverview.push(this.getAttendanceModule())
     this.moduleOverview.push(this.getTimesheetModule())
     this.moduleOverview.push(this.getPayrollModule())
+    this.moduleOverview.push(this.getPerformanceModule())
+    this.moduleOverview.push(this.getOrganizationSettingsModule())
+    this.moduleOverview.push(this.getTenantManagementModule())
     this.moduleOverview.push(this.getApprovalWorkflowModule())
   }
 
@@ -89,6 +92,17 @@ export class ModuleComponent implements OnInit {
     return timesheetModule;
   }
 
+  getPerformanceModule(): ModuleOverview {
+    let performaceModule: ModuleOverview = {
+      name: "Performance",
+      icon: "assets/Icons/performance.svg",
+      backgroudColor: "#ebffec",
+      popUpDetail: null
+    };
+
+    return performaceModule;
+  }
+
   getApprovalWorkflowModule(): ModuleOverview {
     let approvalWfModule: ModuleOverview = {
       name: "Approval workflow",
@@ -98,6 +112,28 @@ export class ModuleComponent implements OnInit {
     };
 
     return approvalWfModule;
+  }
+
+  getOrganizationSettingsModule(): ModuleOverview {
+    let organizationSettingsModule: ModuleOverview = {
+      name: "Organization level global settings",
+      icon: "assets/Icons/organization-settings.svg",
+      backgroudColor: "#ebf7ff",
+      popUpDetail: null
+    };
+
+    return organizationSettingsModule;
+  }
+
+  getTenantManagementModule(): ModuleOverview {
+    let organizationSettingsModule: ModuleOverview = {
+      name: "Tenant management",
+      icon: "assets/Icons/tenant-management.svg",
+      backgroudColor: "#ffebfcff",
+      popUpDetail: null
+    };
+
+    return organizationSettingsModule;
   }
 
   getModuleDetail(module: ModuleOverview) {
@@ -120,6 +156,18 @@ export class ModuleComponent implements OnInit {
         break;
       case "Timesheet":
         module.popUpDetail = this.addTimeSheetDetail();
+        this.activeModule = module;
+        break;
+      case "Performance":
+        module.popUpDetail = this.addPerformanceDetail();
+        this.activeModule = module;
+        break;
+      case "Organization level global settings":
+        module.popUpDetail = this.addOrganizatoinSettingDetail();
+        this.activeModule = module;
+        break;
+      case "Tenant management":
+        module.popUpDetail = this.addTenantManagementDetail();
         this.activeModule = module;
         break;
       case "Approval workflow":
@@ -582,13 +630,158 @@ export class ModuleComponent implements OnInit {
   }
 
   addOrganizatoinSettingDetail(): ModuleDetail {
+    let popUpDetail: ModuleDetail = {
+      overview: "The global settings module was designed to manage core organizational configurations, subscription plans, and master data that act as the backbone for all other modules.",
+      subHeading: "Key Areas of Expertise",
+      detail: [
+        {
+          heading: "Subscription Management",
+          description: [
+            "Configured multiple subscription types such as Standard, Premium, and Elite.",
+            "Supported creation of custom subscription types to meet specific organizational needs.",
+            "Implemented add-on based subscriptions, which function as stand-alone features independent of primary subscription plans.",
+            "Defined subscription pricing dynamically based on total licenses purchased."
+          ]
+        },
+        {
+          heading: "Role & Privilege Configuration",
+          description: [
+            "Designed role-based access control across modules (e.g., Admin, Manager, Employee roles).",
+            "Assigned role actions per module to ensure secure and controlled access."
+          ]
+        },
+        {
+          heading: "Master Data Configuration",
+          description: [
+            "Created and maintained global master data such as job titles, departments, employment types, and locations.",
+            "Ensured these master data sets were reusable across all modules for consistency."
+          ]
+        },
+        {
+          heading: "Technical Implementation",
+          description: [
+            "Enabled global settings and master data to be accessed anytime via cache mechanisms, DLL methods, or GET calls, ensuring high availability and performance."
+          ]
+        }
+      ]
+    }
 
-    return null;
+    return popUpDetail;
+  }
+
+  addTenantManagementDetail(): ModuleDetail {
+    let popUpDetail: ModuleDetail = {
+      overview: "The Tenant Module is designed to manage client organizations (tenants) under a multi-tenant SaaS architecture. I have worked extensively on its design, configuration, and administration, ensuring that both base tenants and sub-tenants are seamlessly onboarded and effectively managed. This module is especially critical for subscription-based platforms, as it governs client setup, licensing, feature access, and lifecycle management.",
+      subHeading: "Key Areas of Expertise",
+      detail: [
+        {
+          heading: "Tenant Creation & Initialization",
+          description: [
+            "Ability to create a new tenant (client organization) from the base tenant.",
+            "While creating, configure essential details including:",
+            "   Subscription Plan (Standard, Premium, Elite, or custom plans).",
+            "   License Count and Pricing model based on the selected subscription.",
+            "   Account Owner Information (name and email).",
+            "On account owner configuration, the system automatically:",
+            "   Creates the tenant environment.",
+            "   Registers the account owner as an employee under the Admin role.",
+            "   Initializes default configurations and master data across modules, tailored to the chosen subscription plan.",
+          ]
+        },
+        {
+          heading: "Subscription & Add-on Management",
+          description: [
+            "Supports base subscription features bundled within a subscription type.",
+            "Enables configuration of add-on (standalone) features that do not belong to any subscription plan.",
+            "Each add-on can be assigned independent licenses and pricing models.",
+            "Tenants can subscribe to multiple add-ons simultaneously, enhancing flexibility and scalability.",
+            "Pricing dynamically adapts based on the subscription and add-ons combined."
+          ]
+        },
+        {
+          heading: "Tenant Lifecycle Management",
+          description: [
+            "Tenants can be categorized as:",
+            "   Paid Clients – fully licensed, production-ready accounts.",
+            "   Trial Accounts – time-limited evaluation accounts.",
+            "Ability to activate or deactivate tenants based on their subscription status, compliance, or business decisions.",
+            "Facilitates smooth transition from trial to paid accounts with license upgrades and feature enablement."
+          ]
+        },
+        {
+          heading: "Base Tenant Governance",
+          description: [
+            "The base tenant retains administrative oversight over sub-tenants.",
+            "Provides access to a limited but critical set of configurations within sub-tenants for monitoring and compliance.",
+            "Ensures centralized governance while allowing sub-tenant independence in their internal operations."
+          ]
+        },
+                {
+          heading: "Business & Technical Impact",
+          description: [
+            "Simplifies client onboarding by automating setup of tenants with pre-configured defaults.",
+            "Enables flexible revenue models with subscription tiers and optional add-ons.",
+            "Supports scalability, allowing multiple clients and diverse business requirements to be handled simultaneously.",
+            "Ensures security and access control by enforcing role-based privileges (e.g., Admin, Manager, Employee).",
+            "Provides multi-tenant architecture benefits such as data isolation, configurability, and centralized oversight."
+          ]
+        }
+      ]
+    }
+
+    return popUpDetail;
   }
 
   addCallTrackerDetail(): ModuleDetail {
 
     return null;
+  }
+
+  addPerformanceDetail(): ModuleDetail {
+    let popUpDetail: ModuleDetail = {
+      overview: "The performance module was designed to streamline employee evaluation cycles, goal-setting, and review processes while ensuring transparency and role-based control.",
+      subHeading: "Key Areas of Expertise",
+      detail: [
+        {
+          heading: "Performance Cycle Configuration",
+          description: [
+            "Supported cycle setup as yearly, half-yearly, quarterly, or monthly.",
+            "Allowed multiple cycles to be configured independently for different groups or locations."
+          ]
+        },
+        {
+          heading: "Evaluation Questionnaires",
+          description: [
+            "Created customizable performance questions for both employees and managers.",
+            "Configured question sets individually for each cycle to match business requirements."
+          ]
+        },
+        {
+          heading: "Review & Rating Workflow",
+          description: [
+            "Employees can self-submit performance inputs during the cycle.",
+            "Managers can validate, adjust ratings, and publish final results.",
+            "Ensured transparency while maintaining confidentiality across review stages."
+          ]
+        },
+        {
+          heading: "Goal Management",
+          description: [
+            "Enabled configuration of goals within each cycle and outside of cycles.",
+            "Supported both self-defined and manager-assigned goals, aligned with organizational objectives."
+          ]
+        },
+        {
+          heading: "Role-Based Control",
+          description: [
+            "All actions (submission, validation, publishing) worked strictly under role and privilege settings.",
+            "Ensured data security, proper authorization, and structured approval flows."
+          ]
+        }
+      ]
+    }
+
+    return popUpDetail;
   }
 
   addLocationTrackerDetail(): ModuleDetail {

@@ -42,20 +42,20 @@
             gap: 15px;
             padding: 0;
             margin-top: 0;
-            
+
             li {
                 width: 180px;
-                height: 120px;
+                height: 140px;
                 transition: transform 0.3s ease;
 
-                img{
+                img {
                     padding: 5px;
                     margin-top: 10px;
                     background-color: #1c6098;
                     border-radius: 50%;
                 }
 
-                .detail{
+                .detail {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -70,19 +70,41 @@
                         margin: 5px;
                         letter-spacing: 2px;
                     }
-    
-                    span {
-                        font-size: 20px;
-                        font-weight: 600;
+
+                    .value-info {
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .gap-splitter{
+                            width: 20px;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+
+                        mat-icon {
+                            padding: 1px;
+                            width: 20px;
+                            height: 20px;
+                            font-size: 20px;
+                            background: #e0e0e0;
+                            color: #1c6098;
+                            border-radius: 50px;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
 
-            li:hover{
+            li:hover {
                 transform: scale(1.02);
             }
 
-            .company, .project{
+            .company,
+            .project {
                 cursor: pointer;
             }
         }
@@ -93,7 +115,7 @@
             text-align: left;
             line-height: 1.4;
 
-            span{
+            span {
                 color: #f0a31e;
             }
         }
@@ -108,8 +130,8 @@
                 color: #fff;
             }
 
-            button:hover{
-                mat-icon{
+            button:hover {
+                mat-icon {
                     animation: flickerAnimation .5s infinite;
                 }
             }
@@ -118,51 +140,64 @@
 }
 
 @keyframes flickerAnimation {
-    0% { scale: 1;}
-    50% { scale: 0.85;}
-    100% { scale: 1;}
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.85;
+    }
+
+    100% {
+        scale: 1;
+    }
 }
 
 @keyframes scalingAnimation {
-    0% { scale: 1;}
-    100% { scale: 1.05;}
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.05;
+    }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .wrapper {
         margin-top: 15px;
     }
-    
-    .experience-detail{
+
+    .experience-detail {
         width: 100%;
         height: 25%;
-    
-        ul{
+
+        ul {
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-evenly;
             list-style-type: none;
             gap: 10px 5px;
             padding: 0 5px;
-    
-            li{
+
+            li {
                 width: 100px;
                 height: 100px;
                 font-size: 12px;
-    
-                p{
+
+                p {
                     margin: 0;
                 }
-    
-                img{
+
+                img {
                     width: 25px;
                     height: 25px;
                     padding: 5px;
                     background-color: #1c6098;
                     border-radius: 50%;
                 }
-    
-                .detail{
+
+                .detail {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
@@ -172,12 +207,12 @@
                     padding: 5px 0;
                     background-color: #1c6098;
                     border-radius: 10px;
-    
+
                     .heading {
                         width: 100%;
                         letter-spacing: 2px;
                     }
-    
+
                     span {
                         font-size: 18px;
                         font-weight: 600;
@@ -186,26 +221,26 @@
             }
         }
     }
-    
-    .img-content-wrapper{
+
+    .img-content-wrapper {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: left;
-    
+
         .left {
             width: 35%;
-    
+
             img {
-    //            margin-top: 30%;
+                //            margin-top: 30%;
                 width: 95%;
                 height: 50%;
             }
         }
-    
-        .right{
+
+        .right {
             width: 60%;
-            
+
             .content {
                 width: 100%;
                 height: 55%;
@@ -213,10 +248,11 @@
                 text-align: center;
                 font-size: 12px;
             }
-    
-            .button{
+
+            .button {
                 margin-top: 15px;
-                button{
+
+                button {
                     height: 30px;
                     padding: 0 5px;
                     font-size: 12px;

@@ -1,0 +1,31 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-label="HRMS Security Performance Icon"
+  class="icon"
+>
+  <!-- Shield background -->
+  <path
+    d="M32 4L12 14v18c0 14 20 22 20 22s20-8 20-22V14L32 4z"
+    fill="#D1FAE5"
+  />
+
+  <!-- Shield outline -->
+  <path
+    d="M32 4L12 14v18c0 14 20 22 20 22s20-8 20-22V14L32 4z"
+    fill="none"
+    stroke="#10B981"
+    stroke-width="2"
+  />
+
+  <!-- Checkmark -->
+  <path
+    d="M22 32l8 8 14-14"
+    fill="none"
+    stroke="#10B981"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
