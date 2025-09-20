@@ -116,7 +116,7 @@ export class ModuleComponent implements OnInit {
 
   getOrganizationSettingsModule(): ModuleOverview {
     let organizationSettingsModule: ModuleOverview = {
-      name: "Organization level global settings",
+      name: "Global settings",
       icon: "assets/Icons/organization-settings.svg",
       backgroudColor: "#ebf7ff",
       popUpDetail: null
@@ -162,7 +162,7 @@ export class ModuleComponent implements OnInit {
         module.popUpDetail = this.addPerformanceDetail();
         this.activeModule = module;
         break;
-      case "Organization level global settings":
+      case "Global settings":
         module.popUpDetail = this.addOrganizatoinSettingDetail();
         this.activeModule = module;
         break;
