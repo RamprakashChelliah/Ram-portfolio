@@ -70,7 +70,8 @@
                     border: 1px solid #03576c;
                 }
 
-                .type-with-icon:hover, .type-with-icon.active{
+                .type-with-icon:hover,
+                .type-with-icon.active {
                     background-color: #40d9ff;
                 }
             }
@@ -185,14 +186,13 @@
 
     .wrapper {
         .overview {
-
-             .filters {
-
-            .skill-types {
-                font-size: 14px;
-                gap: 10px;
+            .filters {
+                .skill-types {
+                    font-size: 14px;
+                    gap: 10px;
+                }
             }
-        }
+
             .card-overview {
                 font-size: 14px;
 
