@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <div class="overview">
+        <div class="top">
+            <div class="title">
+                <span>What Skill I Have</span>
+                <h2>My Skills</h2>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <ul class="skill-types">
+                <li [ngClass]="['skill-type', shouldUseSkillIcon ? 'type-with-icon' : '']" *ngFor="let skillType of skillTypes" [class.active]="skillType.name === activeSkill"
+                    (click)="setActiveSkill(skillType.name)">
+                    <ng-container *ngIf="shouldUseSkillIcon; else showName">
+                        <img [src]="skillType.icon" [alt]="skillType.name" width="40px" height="40px" />
+                    </ng-container>
+        
+                    <ng-template #showName>
+                        {{ skillType.name }}
+                    </ng-template>
+        
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="card-overview">
+            <div class="card" *ngFor="let skill of skillOverview">
+                <div class="card-content">
+                    <div class="header">
+                        <div class="left">
+                            <div mat-card-avatar class="skill-logo"
+                                [ngStyle]="{'background-color': skill.backgroudColor}">
+                                <img src={{skill.icon}} alt="" width="25px">
+                            </div>
+                            <div class="title">
+                                <p>{{skill.name}}</p>
+                                <span>{{skill.description}}</span>
+                            </div>
+                        </div>
+                        <!-- <div class="right">
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-navigation-bar></app-navigation-bar>
+</div>

@@ -8,6 +8,7 @@ import { RecentWorkComponent } from './recent-work/recent-work.component';
 import { ProjectComponent } from './project/project.component';
 import { CompanyComponent } from './company/company.component';
 import { ModuleComponent } from './module/module.component';
+import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -15,7 +16,7 @@ const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'skill', component: SkillComponent},
+  {path: 'skill', component: SkillsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'recent-work', component: RecentWorkComponent},
   {path: 'projects', component: ProjectComponent},

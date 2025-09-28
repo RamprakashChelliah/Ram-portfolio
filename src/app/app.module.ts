@@ -27,6 +27,8 @@ import { MobileViewComponent } from './about/mobile-view/mobile-view.component';
 import { ProjectComponent } from './project/project.component';
 import { CompanyComponent } from './company/company.component';
 import { ModuleComponent } from './module/module.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ModuleComponent } from './module/module.component';
     ProjectComponent,
     CompanyComponent,
     ModuleComponent,
+    ContactFormComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
