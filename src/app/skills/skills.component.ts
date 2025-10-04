@@ -83,6 +83,13 @@ export class SkillsComponent implements OnInit {
     this.skillOverview.push(this.getCSSSkill())
     this.skillOverview.push(this.getJavaScriptSkill())
     this.skillOverview.push(this.getAngularSkill())
+    this.skillOverview.push(this.getProblemSolvingSkill())
+    this.skillOverview.push(this.getCreativeThinkingSkill())
+    this.skillOverview.push(this.getLeadershipSkill())
+    this.skillOverview.push(this.getTeamWorkSkill())
+    this.skillOverview.push(this.getTimeManagementSkill())
+    this.skillOverview.push(this.getCriticalThinkingSkill())
+    this.skillOverview.push(this.getAdaptabilitySkill())
   }
 
   getCSharpSkill(): SkillOverview {
@@ -177,6 +184,90 @@ export class SkillsComponent implements OnInit {
       backgroudColor: "#ffebfcff",
       description: "Framework for building scalable single-page applications",
       skillType: "Front-end skills"
+    };
+
+    return angularSkill;
+  }
+
+  getProblemSolvingSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Problem solving",
+      icon: "assets/skill-logo/problem-solving-logo.svg",
+      backgroudColor: "#e8f8ffff",
+      description: "Creative and effective solutions to complex challenges",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+    getCreativeThinkingSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Creative Thinking",
+      icon: "assets/skill-logo/creative-thinking-logo.svg",
+      backgroudColor: "#ffffebff",
+      description: "Innovative ideas and approaches to projects",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+  getLeadershipSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Leadership",
+      icon: "assets/skill-logo/leadership-logo.svg",
+      backgroudColor: "#e8f8ffff",
+      description: "Guiding teams and managing projects successfully",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+  getTeamWorkSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Team Work",
+      icon: "assets/skill-logo/teamwork-logo.svg",
+      backgroudColor: "#fff3e8ff",
+      description: "Collaborative and effective communication with teams",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+   getTimeManagementSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Time Management",
+      icon: "assets/skill-logo/time-management-logo.svg",
+      backgroudColor: "rgba(235, 255, 236, 1)",
+      description: "Efficient prioritization and task completion",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+  getCriticalThinkingSkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Critical Thinking",
+      icon: "assets/skill-logo/critical-thinking-logo.svg",
+      backgroudColor: "rgba(254, 235, 255, 1)",
+      description: "Analyzing facts to form sound judgments and decisions",
+      skillType: "Soft skills"
+    };
+
+    return angularSkill;
+  }
+
+  getAdaptabilitySkill(): SkillOverview {
+    let angularSkill: SkillOverview = {
+      name: "Adaptability",
+      icon: "assets/skill-logo/adaptability-logo.svg",
+      backgroudColor: "#e3fff5ff",
+      description: "Flexibility to adjust to new conditions and challenges",
+      skillType: "Soft skills"
     };
 
     return angularSkill;
