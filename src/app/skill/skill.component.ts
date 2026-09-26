@@ -15,6 +15,10 @@ export class SkillComponent implements AfterViewInit{
       name: "LINQ"
     },
     {
+      image: "assets/skill-logo/sql.png",
+      name: "SQL"
+    },
+    {
       image: "assets/skill-logo/MongoDB.png",
       name: "Mongo DB"
     },

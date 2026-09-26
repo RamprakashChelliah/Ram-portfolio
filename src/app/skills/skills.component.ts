@@ -78,6 +78,7 @@ export class SkillsComponent implements OnInit {
     this.skillOverview.push(this.getCSharpSkill())
     this.skillOverview.push(this.getDotNetSkill())
     this.skillOverview.push(this.getMongodbSkill())
+    this.skillOverview.push(this.getSQLSkill())
     this.skillOverview.push(this.getLinqSkill())
     this.skillOverview.push(this.getHtmlSkill())
     this.skillOverview.push(this.getCSSSkill())
@@ -127,6 +128,18 @@ export class SkillsComponent implements OnInit {
     };
 
     return mongoDBSkill;
+  }
+
+  getSQLSkill(): SkillOverview {
+    let sqlSkill: SkillOverview = {
+      name: "SQL",
+      icon: "assets/skill-logo/sql.png",
+      backgroudColor: "#ebffff",
+      description: "Relational database for structured data storage, querying, and management",
+      skillType: "Back-end skills"
+    };
+
+    return sqlSkill;
   }
 
   getLinqSkill(): SkillOverview {

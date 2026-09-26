@@ -37,7 +37,7 @@ export class AboutComponent implements OnInit, OnChanges{
 
   getTotalExperience() : string{
     const startDate = new Date('2021-08-01');
-    const endDate = new Date();
+    const endDate = new Date('2026-08-01');
 
     let years = endDate.getFullYear() - startDate.getFullYear();
     let months = endDate.getMonth() - startDate.getMonth();

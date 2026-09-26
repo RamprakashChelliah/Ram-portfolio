@@ -33,7 +33,7 @@ export class CompanyComponent {
     let companyDetail: CompanyDetail = {
       name: "Awarious Technology Solution",
       jobTitle: "Software Engineer",
-      dateOfEmployment: "Aug-2021 to Present",
+      dateOfEmployment: "Aug-2021 to Jul 2026",
       description: descriptions
     };
 
